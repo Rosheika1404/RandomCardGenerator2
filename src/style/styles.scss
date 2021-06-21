@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    background-color: #0e7e12;
+    box-sizing: border-box;
+}
+
+.card {
+    height: 640px;
+    width: 448px;
+    margin: auto;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid black;
+    position: relative;
+
+    .middle {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 100px;
+        border: 1px solid black;
+        height: 420px;
+        width: 240px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -220px 0 0 -120px;
+        display: flex;
+
+    }
+
+    &::before {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 120px;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 120px;
+        transform: rotate(180deg);
+    }
+
+    &.spades:before,
+    &.spades:after {
+        content: '\2660';
+    }
+
+    &.clubs:before,
+    &.clubs:after {
+        content: '\2663';
+    }
+
+    &.hearts:before,
+    &.hearts:after {
+        content: '\2665';
+        color: red;
+    }
+
+    &.diamonds:before,
+    &.diamonds:after {
+        content: '\2666';
+        color: red;
+    }
+}
