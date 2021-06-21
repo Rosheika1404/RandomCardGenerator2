@@ -1,8 +1,7 @@
 import '../style/styles.scss';
 window.onload = () => {
     document.querySelector('.card').classList.add(generateSuite());
-    document.querySelector('.middle').innerHTML= generateDeck();
-    
+    document.querySelector('.card').innerHTML= generateDeck(); 
 }
 
 
@@ -24,4 +23,3 @@ let generateSuite = () => {
 generateSuite();
 
 //   const suite = ["♥", "♦", "♠", "♣"]
-alert(window.onload);
